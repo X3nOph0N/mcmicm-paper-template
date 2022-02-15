@@ -7,3 +7,4 @@ rm document.big
 rm document.log
 rm document.toc
 rm document.fdb_latexmk
+rm document.fls

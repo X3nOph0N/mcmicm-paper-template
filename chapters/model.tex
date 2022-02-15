@@ -10,8 +10,8 @@
 %\fancyhead[R]{Page \thepage\ of 15}
 \fancyhead[L]{Team \# 1917694}
 \fancyfoot[C]{\bfseries\thepage}
-\section{\textbf{Introduction}}
-\subsection{\textbf{Restatement of the Problem}}
+\textbf{\section{Introduction}}
+\textbf{\subsection{Restatement of the Problem}}
 Many people nowadays rely heavily on opioids and even die from opioid overdose. Reducing opioid use and suppressing opioid spread becomes an urgent task. Therefore we are facing the following problems:
 
 \begin{itemize}
@@ -20,7 +20,7 @@ Many people nowadays rely heavily on opioids and even die from opioid overdose. 
 	\item Analyze the correlation between the number of opioid cases and the socio-economic factors, then modify the model to include important factors.
 	\item Establish effective policies to prevent the spread of opioids and evaluate the effectiveness of policies.
 \end{itemize}
-\subsection{\textbf{Our Works}}
+\textbf{\subsection{Our Works}}
 
 \begin{itemize}
 	\item First, we build a model to analyze the characteristics of opioid spread, and determine the source of opioid cases based on the characteristics.
@@ -28,15 +28,15 @@ Many people nowadays rely heavily on opioids and even die from opioid overdose. 
 	\item We use information entropy to measure the correlations between the number of opioid cases and the socio-economic factors, and propose reasonable suggestions for those factors with high correlation with the number of opioid cases.
 	\item Finally, we establish effective policies and perform simulations to evolve the spread of opioids, analyze the result to determine when opioid spread can be successfully suppressed, and quantify the goals that government needs to achieve.
 \end{itemize}
-\section{\textbf{Assumptions and Notations}}
+\textbf{\section{Assumptions and Notations}}
 \vspace*{-10pt}
-\subsection{\textbf{Assumptions}}
+\textbf{\subsection{Assumptions}}
 Due to the lack of necessary data, we make the following assumptions to help us perform modeling.
 \begin{itemize}[itemsep=0.3ex, leftmargin=1.2cm]
 	\item[1.] Inflow of drugs from outside of the five states are neglected.
 	\item[2.] The microscopic behaviors of opioid transmission are ignored.
 \end{itemize}
-\subsection{\textbf{Notations}}
+\textbf{\subsection{Notations}}
 Here are all the notations and their meanings in this paper.
 \begin{table}[h]
 	\centering
@@ -62,9 +62,9 @@ Here are all the notations and their meanings in this paper.
 	\end{tabular}
 \end{table}
 
-\section{\textbf{Model Construction}}
+\textbf{\section{Model Construction}}
 Census data will have certain deviations. We don't consider statistical errors of the provided census data and just use the values provided.
-\subsection{\textbf{Opioid Spread Model}}
+\textbf{\subsection{Opioid Spread Model}}
 As is well known, spreading of illegal drugs are elusive, therefore we do not consider the ways, actions and tools of spreading opioid uses. Instead we focus on analyzing the characteristics of drug use spreading, including the amount of transfer, rate of change and location, in order to obtain conclusions that are convenient for the administration and control of government departments.
 
 According to the report on opioid use published by NFLIS\cite{characteristic}, we define the drug spread characteristics as the number of cases, the rate of change, and the location of use:
@@ -117,7 +117,7 @@ which indicates that $i(t)$ is an S-shaped growth curve, as shown in Figure \ref
 	\caption{Drug cases and proportion of opioid cases over time} % 标题
 	\label{spread_rate}
 \end {figure}
-\subsection{\textbf{Determining the Epidemic Threshold}}
+\textbf{\subsection{Determining the Epidemic Threshold}}
 Since the number of drug cases, population and level of economic development are different between states and counties, the epidemic threshold is calculated from a statistical perspective, and each state and county should have different epidemic thresholds. In addition, the excess of the amount and speed of drug transmissions should both raise the government's concern, therefore two epidemic thresholds are set in consideration of both aspect, respectively.
 
 For the epidemic threshold in the number of drug cases, $m+2\sigma$ is generally considered as a gold standard, where $m$ and $\sigma$ denote the mean and standard deviation of the number of drug cases respectively\cite{threshold_who}. The calculated threshold is considered constant over time, because the number of drug cases increases by year, and by setting a relatively low threshold, the government can stay vigilant and therefore suppress the number of drug cases promptly.
@@ -129,7 +129,7 @@ For the epidemic threshold in transmission speed, we compute the derivative of $
 
 We observe that the growth rate $N_t'(t)$ turns out to be an exponential function, and the number of drug cases will keep growing if no interventions are imposed. So we set the initial growth rate at $t=0$ to be the baseline growth rate, which turns out to be $\mu_1p_0$. Here we find that the growth rate threshold is related to $\mu_1$ and $p_0$, where $p_0$ reflects the amount of drug users in a given region, and $\mu_1$ reflects the administrative state such as the strictness of management.
 
-\subsection{\textbf{Modification to the Opioid Spread Model}}
+\textbf{\subsection{Modification to the Opioid Spread Model}}
 \textbf{\subsubsection{Determining Correlation Using Information Entropy}}
 There are uncertainties and randomness in the process of drug transmission, and the way to eliminate uncertainty is to introduce new information from the outside, and using this information can eliminate some of the uncertainties. Information entropy is a common measurement of uncertainty.
 
@@ -175,8 +175,8 @@ Given the information of the socio-economic factor set $E$ in the past few years
 	T_\mathrm{max}=\mathrm{ArgMax}\prod_{t=1}^{n}(P(E_t|A_t)|P(T_t|T_{t-1}))
 \end{equation}
 where $E_t, A_t, T_t$ represents the explicit state, hidden state, and transition matrix at time $t$. The transition matrix $T$ with the highest probability can be obtained based on the distribution of the population, and the result becomes more stable over time. With the transition matrix, which indicates the drug case transmission, the government will be able to effectively monitor and prevent the drug spread in the region, thus reduce the number of drug cases.
-\section{\textbf{Model Simulation and Analysis}}
-\subsection{\textbf{Describing Characteristics of Opioid Spread}}
+\textbf{\section{Model Simulation and Analysis}}
+\textbf{\subsection{Describing Characteristics of Opioid Spread}}
 
 Using the provided data, we perform simulation on our model to simulate the drug spread in and between states and counties, then analyze the resulting spread characteristics.
 
@@ -265,7 +265,7 @@ Stability analysis: We iterate the total nuamber of reported drug cases in each 
 
 We find that Ohio will gradually become a gathering place for drugs and opioids over time. Therefore, the government should strengthen management and control in Ohio and improve drug rehabilitation measures. In West Virginia, it demonstrates slower growth compared to other states. For Kentucky, Pennsylvania and Virginia, although the number of drug cases are lower than Ohio, they should also raise the government's attention, in order to be effective controlled when the number of drug cases reaches the threshold.
 
-\subsection{\textbf{Suggestions}}
+\textbf{\subsection{Suggestions}}
 
 Opioids are widely prescribed to relieve pain. However, bad habits lead to the abuse of opioids, which also causes great harm.
 
@@ -277,7 +277,7 @@ As indicated by $\Delta h$, the number of opioids cases demonstrates high correl
 	\item For the family status: It's the responsibility for the government to provide more job opportunities to alleviate people's pressure, even to set up a free subsidy program. In addition, domestic violence should be prohibited, in order to maintain a harmonious family relationship.
 	\item Detection and response: National and local governments play an important role in detecting and preventing opioid overdose and abuse. Monitoring systems and early warning mechanisms should be established to effectively detect and respond to the spread of opioid abuse. Institutions such as the Centers for Disease Control and Prevention, the health department, and law enforcement agencies should be at the forefront to address this issue as well.
 \end{itemize}
-\subsection{\textbf{Evaluating the Effectiveness of Strategies}}
+\textbf{\subsection{Evaluating the Effectiveness of Strategies}}
 
 Drug spread in the crowd:
 
@@ -324,20 +324,20 @@ The figure shows that the number of drug cases transmission will gradually decre
 	\label{compare}
 \end{table}
 
-\section{\textbf{Strengths and Weaknesses}}
+\textbf{\section{Strengths and Weaknesses}}
 Based on the modeling process, we make some comments on our model as listed below.
-\subsection{\textbf{Strengths}}
+\textbf{\subsection{Strengths}}
 \begin{itemize}
 	\item We employ transition matrices in our model to analyze the spread and characteristics of opioid use as well as to provide quantitative results for further analysis, which shares a lot of similarities with the Markov chain, leading to a concise, easy-to-understand yet powerful model structure. Our model can also be adapted for other purposes such as computing rankings and analyzing virus transmission, showing good generalizability.
 	\item By employing conditional entropy, our model is able to effectively measure the correlations between the opioid cases and socio-economic factors without knowing the concrete relationships (e.g. linear or non-linear) between them.
 	\item Two epidemic thresholds are determined for the number and the rate of opioid transmissions, both of which are quantified, making it convenient for government departments to make decisions.
 \end{itemize}
-\subsection{\textbf{Weaknesses}}
+\textbf{\subsection{Weaknesses}}
 \begin{itemize}
 	\item We do not take the opioid spread outside of the five states (KY, OH, PA, VA, WV) into consideration due to the lack of data, which may affect the analysis result.
 	\item Although reasonable suggestions are made for the socio-economic factors which shows high correlation with the number of opioid cases, we do not quantify each effect when policies are imposed, instead we represent the effects by a single parameter, the value of which we have provided.
 \end{itemize}
-\section{\textbf{Sensitivity Analysis}}
+\textbf{\section{Sensitivity Analysis}}
 
 The analysis of the spread and flow of drugs is mainly based on the transition matrix $T$. In our assumptions, we assume that the transition matrix does not contain the inflow of opioids from outside the five states, but in actual cases this is not appropriate. We do sensitivity analysis of the transition matrix, in order to prove the robustness of our model.
 While imposing strict management inside the state, there may be inflows of opioids from outside the five states, and the inflows may be long-term continuous inflows or indirect outflows. We calculate the transition matrix $T$ in both cases, then do sensitivity analysis of the spread results of the five states. The result is shown in Figure \ref{sensi}.
@@ -350,7 +350,7 @@ While imposing strict management inside the state, there may be inflows of opioi
 \end {figure}
 \newpage
 Both the continuous and periodical inflows lead to increase in the number of opioids in the state. The result shows that the continuous inflow of opioids has the greatest impact. Although the indirect inflows are incidents, they should also raise the government's concern. In conclusion, the government should not only impose strict regulations on opioids inside the state, but also pay attention to the inflow of opioids from outside the state, and monitors the logistics constantly.
-\section{\textbf{Conclusion}}
+\textbf{\section{Conclusion}}
 We build a model to analyze the opioid spread in and between the provided states and counties, determine epidemic thresholds with respect to the number and spread rate of opioid cases, analyze the correlations between the number of opioid cases and various socio-economic factors, then we modify our model to include the most important factors, and provide suggestions to the government based on the factors with high correlations with the number of opioid cases. We also perform simulations to monitor the evolution of opioid use cases in the future. Here are some of our interesting findings:
 
 \begin{itemize}

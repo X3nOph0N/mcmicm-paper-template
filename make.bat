@@ -1,5 +1,5 @@
 xelatex document.tex
-bibtex books.bib
+bibtex books
 xelatex document.tex
 xelatex document.tex
 del document.aux

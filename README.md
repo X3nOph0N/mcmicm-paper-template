@@ -1,10 +1,3 @@
 # 美赛论文模板
 
-## 结构
-
-- chapters
-- code
-- figure
-- summary
-- books.bib
-- documents
+直接执行脚本`make.{sh/bat}`即可,需要注意的是论文中使用的两种字体在linux下默认不存在可能需要自行安装

@@ -1,0 +1,108 @@
+% 文档类
+\documentclass[13pt]{ctexart}
+% 设置页面
+\usepackage{geometry}
+% 插图片
+\usepackage{graphicx}
+% 设置标题 重命名为英文
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\contentsname}{Contents}
+% 设置摘要页缩减 
+\usepackage{changepage}
+% 便于修改字体
+\usepackage{fontspec}
+% 设置页眉页脚
+\usepackage{fancyhdr}
+% 清空页眉页脚
+\pagestyle{fancy}
+% 设置列表缩进
+\usepackage[shortlabels]{enumitem}
+% 设置修改默认的section标题大小
+\usepackage{titlesec}
+\titleformat*{\section}{\LARGE}
+\titleformat*{\subsection}{\Large}
+\titleformat*{\subsubsection}{\Large}
+% 使用数学宏包
+\usepackage{amsmath}
+% 设置表格的列格式
+\usepackage{array}
+% 三线表宏包
+\usepackage{booktabs}
+% 设置产考文献不输出默认名
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+% 引入网站作为参考文献
+\usepackage{url}
+% 设置等宽的代码字体
+\setmonofont{Courier New}  % windows 代码字体 可以用这个
+% \setmonofont{}
+% 颜色
+\usepackage{xcolor}
+% 代码高亮方案宏包
+\usepackage{listings}
+\definecolor{CPPLight}  {HTML} {686868}
+\definecolor{CPPSteel}  {HTML} {888888}
+\definecolor{CPPDark}   {HTML} {262626}
+\definecolor{CPPBlue}   {HTML} {4172A3}
+\definecolor{CPPGreen}  {HTML} {487818}
+\definecolor{CPPBrown}  {HTML} {A07040}
+\definecolor{CPPRed}    {HTML} {AD4D3A}
+\definecolor{CPPViolet} {HTML} {7040A0}
+\definecolor{CPPGray}  {HTML} {B8B8B8}
+\lstset{
+	basicstyle=\ttfamily,
+	breaklines=true,
+	framextopmargin=50pt,
+	frame=bottomline,
+	columns=fixed,       
+    %numbers=left,                                       % 在左侧显示行号
+	frame=none,                                          % 不显示背景边框
+	backgroundcolor=\color[RGB]{255,255,255},            % 设定背景颜色
+	keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+	numberstyle=\footnotesize\color{darkgray},           % 设定行号格式
+	commentstyle=\itshape\color[RGB]{0,96,96},                % 设置代码注释的格式
+	stringstyle=\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+	showstringspaces=false,                              % 不显示字符串中的空格
+	language=python,                                     % 设置语言
+	morekeywords={alignas,continute,friend,register,true,alignof,decltype,goto,
+		reinterpret_cast,try,asm,defult,if,return,typedef,auto,delete,inline,short,
+		typeid,bool,do,int,signed,typename,break,double,long,sizeof,union,case,
+		dynamic_cast,mutable,static,unsigned,catch,else,namespace,static_assert,using,
+		char,enum,new,static_cast,virtual,char16_t,char32_t,explict,noexcept,struct,
+		void,export,nullptr,switch,volatile,class,extern,operator,template,wchar_t,
+		const,false,private,this,while,constexpr,float,protected,thread_local,
+		const_cast,for,public,throw,std},
+	emph={map,set,multimap,multiset,unordered_map,unordered_set,numpy,graph,path,append,extend,
+		unordered_multiset,unordered_multimap,vector,string,list,deque,
+		array,stack,forwared_list,iostream,memory,shared_ptr,unique_ptr,
+		random,bitset,ostream,istream,cout,cin,endl,move,default_random_engine,
+		uniform_int_distribution,iterator,algorithm,functional,bing,numeric,},
+	emphstyle=\color{CPPViolet}, 
+}
+
+\begin{document}
+\newgeometry{top = 1cm, right = 2.54cm, left = 2.54cm, bottom = 2.54cm}
+% 第一页的字体为times new roman
+\setmainfont{Times New Roman} % linux 没这个字体，自己安装。
+\thispagestyle{empty}
+
+% 摘要页每年都变，所以单独拿出去了
+\input{summary/summary.tex}
+
+\input{chapters/abstract.tex}
+
+\input{chapters/memo.tex}
+
+\input{chapters/contents.tex}
+
+% 目录页后面是第一页
+\setcounter{page}{1}
+
+\input{chapters/model.tex}
+
+\input{chapters/reference.tex}
+
+\input{chapters/appendix.tex}
+
+\end{document}

@@ -1,0 +1,9 @@
+xelatex document.tex
+bibtex books.bib
+xelatex document.tex
+xelatex document.tex
+rm document.aux
+rm document.big
+rm document.log
+rm document.toc
+rm document.fdb_latexmk
